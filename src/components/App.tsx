@@ -1,15 +1,13 @@
-import { isServer } from "solid-js/web";
-import { Route, Routes, Router } from "@solidjs/router";
-
-
+import { Route, Routes, Router, RouterProps } from "@solidjs/router";
 import { TestComp } from "./TestComp";
 
 
-export const App = (props: { path: string }) => {
-  let routerProps = {};
+export const App = (props: { path?: string }) => {
+  let routerProps: RouterProps = { base: "/" };
 
-  if (isServer) {
+  if (props.path) {
     routerProps = {
+      ...routerProps,
       url: props.path
     };
   }

@@ -14,8 +14,8 @@
   //   "isolatedModules": true,
   //   // Add type definitions for our Vite runtime.
     "typeRoots": ["node_modules"],
-  //   "types": ["vite/client"],
-  //   // "baseUrl": "./",
+    "types": ["vite/client"],
+    "baseUrl": "./",
   //   "allowSyntheticDefaultImports": true,
   //   "jsx": "preserve",
   //   "jsxImportSource": "solid-js",
